@@ -1,25 +1,37 @@
 import logo from './logo.svg';
+import React from 'react';
+import ReactDOM from 'react-dom'
 import './App.css';
+import { createElement } from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+          React.createElement("body", null,
+          React.createElement("div", null,
+          React.createElement("h1", null, "Recordando react")),
+          React.createElement("div", null,
+          React.createElement("ul", null, 
+          React.createElement("li", null, "Juan"),
+          React.createElement("li", null, "Pepe"),
+          React.createElement("li", null, "Fabian"))))
+    
+    
   );
 }
 
+function Cuerpo(){
+
+  return (
+    React.createElement("div", null,
+    React.createElement("ul", null, 
+    React.createElement("li", null, "Juan"),
+    React.createElement("li", null, "Pepe"),
+    React.createElement("li", null, "Fabian")))
+
+  );
+}
+
+ //ReactDOM.render(
+ //  Cuerpo()
+ //)
 export default App;
